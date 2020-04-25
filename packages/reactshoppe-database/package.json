@@ -1,0 +1,12 @@
+{
+  "name": "reactshoppe-database",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Patrick Brandt <patrick@fullstory.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "reactshoppe-database.js",
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}

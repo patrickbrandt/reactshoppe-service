@@ -1,8 +1,8 @@
 import { APIGatewayProxyEvent } from 'aws-lambda';
 import * as AWS from 'aws-sdk';
 import { v4 as uuidv4 } from 'uuid';
-import { noticeError } from 'newrelic';
-import { TableNames } from '../lib/reactshoppe-database';
+//import { noticeError } from 'newrelic';
+import { TableNames } from 'reactshoppe-database';
 import { success, failure } from './response';
 
 export default async (event: APIGatewayProxyEvent) => {
@@ -23,7 +23,7 @@ export default async (event: APIGatewayProxyEvent) => {
     return success(body);
 
   } catch (error) {
-    noticeError(error); // if this isn't here, an error isn't reported in NR
+    //noticeError(error); // if this isn't here, an error isn't reported in NR
     const body = error.stack || JSON.stringify(error, null, 2);
     return failure(body);
   }

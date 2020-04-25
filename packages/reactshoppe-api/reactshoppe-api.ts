@@ -1,7 +1,7 @@
 import { Cors, LambdaRestApi } from "@aws-cdk/aws-apigateway";
 import * as core from "@aws-cdk/core";
 import * as lambda from "@aws-cdk/aws-lambda";
-import { headers } from './response';
+import { headers } from 'functions/response';
 
 export class ReactshoppeApi extends core.Construct {
   private handler: lambda.Function;
@@ -10,7 +10,7 @@ export class ReactshoppeApi extends core.Construct {
 
     this.handler = new lambda.Function(this, "ApiHandler", {
       runtime: lambda.Runtime.NODEJS_10_X,
-      code: lambda.Code.asset("./functions"),
+      code: lambda.Code.fromAsset("packages/functions"),
       handler: "index.main",
       
     });
