@@ -1,0 +1,19 @@
+{
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.51",
+    "@types/newrelic": "^6.4.0",
+    "@types/uuid": "^7.0.3",
+    "aws-lambda": "^1.0.5",
+    "newrelic": "^6.6.0",
+    "uuid": "^7.0.3"
+  }
+}
