@@ -1,9 +1,8 @@
 import { APIGatewayProxyEvent } from 'aws-lambda';
 import * as AWS from 'aws-sdk';
 import { v4 as uuidv4 } from 'uuid';
-//import { noticeError } from 'newrelic';
-import { TableNames } from 'reactshoppe-database';
 import { success, failure } from './response';
+import { TableNames } from 'reactshoppe-database/TableNames'
 
 export default async (event: APIGatewayProxyEvent) => {
   const ddb = new AWS.DynamoDB.DocumentClient();

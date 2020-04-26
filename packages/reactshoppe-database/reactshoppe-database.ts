@@ -1,6 +1,7 @@
 import * as core from '@aws-cdk/core';
 import * as iam from '@aws-cdk/aws-iam';
 import dynamodb = require('@aws-cdk/aws-dynamodb');
+import { TableNames } from './TableNames';
 
 export class ReactshoppeDatabase extends core.Construct {
   private table: dynamodb.Table;
@@ -24,6 +25,3 @@ export class ReactshoppeDatabase extends core.Construct {
   }
 };
 
-export enum TableNames {
-    Order = 'Order'
-};
