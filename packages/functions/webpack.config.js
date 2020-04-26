@@ -13,7 +13,7 @@ module.exports = {
   },
   context: path.resolve(__dirname),
   entry: './index.js',
-  externals: ['aws-sdk'],
+  externals: ['aws-sdk', 'newrelic'],
   output: {
     libraryTarget: 'commonjs',
     filename: 'entrypoint.js',
