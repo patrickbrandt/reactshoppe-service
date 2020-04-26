@@ -8,10 +8,8 @@ module.exports = {
   },
   mode: 'production',
   optimization: {
-    minimize: false,
-    usedExports: true,
+    minimize: true,
     sideEffects: false,
-
   },
   context: path.resolve(__dirname),
   entry: './index.js',
