@@ -5,8 +5,11 @@ import checkout from './checkout';
 import { failure, fullstoryHeader } from './response';
 
 exports.main = async (event: APIGatewayProxyEvent, context: Context) => {
-  //console.log(JSON.stringify(event));
-  addCustomAttribute('FullStoryURL', event.headers ? event.headers[fullstoryHeader] : '')
+  const fullstoryUrlKey = Object.keys(event.headers || {}).find(key => {
+    return key.toLocaleLowerCase() === fullstoryHeader.toLocaleLowerCase();
+  }) || '';
+  const fullstoryURL = event.headers ? event.headers[fullstoryUrlKey] : undefined;
+  addCustomAttribute('FullStoryURL', fullstoryURL || 'none provided');
   switch (event.path) {
     case '/ping':
       return ping();
